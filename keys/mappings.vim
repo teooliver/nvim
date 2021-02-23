@@ -47,3 +47,12 @@ nnoremap <Leader>O O<Esc>^Da
 " Teo maps
 nnoremap <C-e> :NERDTreeToggle<CR>
 nnoremap <C-`> :terminal<CR>
+
+
+" Move lines up and down
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+" inoremap <A-j> <Esc>:m .+1<CR>==gi
+" inoremap <A-k> <Esc>:m .-2<CR>==gi

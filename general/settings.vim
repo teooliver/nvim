@@ -2,18 +2,20 @@
 let g:mapleader = "\<Space>"
 
 " Teo Settings
-colorscheme codedark
+" colorscheme codedark
+" colorscheme substrata
+colorscheme novum
 " if(has("termguicolors"))
 set termguicolors                     " For colors to work on Mac iTerm
 syntax enable                           " Enables syntax highlighing
-
+set colorcolumn=180
 
 
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
-set fileencoding=utf-8                  " The encoding written to file
+" set fileencoding=utf-8                  " The encoding written to file
 set ruler              			            " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object

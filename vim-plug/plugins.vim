@@ -22,6 +22,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tomasiser/vim-code-dark'
     Plug 'pangloss/vim-javascript'
     Plug 'itchyny/vim-gitbranch'
+    Plug 'arzg/vim-substrata'
+    Plug 'dylnmc/novum.vim'
+
     "  Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -34,5 +37,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Barbar - tabline plugin
     " Plug 'romgrk/barbar.nvim'
     " Plug 'kyazdani42/nvim-web-devicons'
+
+    " Status Line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    
+    "Prettier
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+    "Linting
+    Plug 'w0rp/ale'
+
+    " Jsx/Js syntax highlighting
+    Plug 'mxw/vim-jsx'
+    Plug 'pangloss/vim-javascript'
+
+
 
 call plug#end()

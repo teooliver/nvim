@@ -2,9 +2,17 @@
 let g:mapleader = "\<Space>"
 
 " Teo Settings
-" colorscheme codedark
+colorscheme codedark
 " colorscheme substrata
-colorscheme novum
+" colorscheme novum
+" colorscheme candid
+" colorscheme minimalist
+
+let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+
 " if(has("termguicolors"))
 set termguicolors                     " For colors to work on Mac iTerm
 syntax enable                           " Enables syntax highlighing

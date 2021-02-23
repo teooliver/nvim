@@ -46,3 +46,4 @@ nnoremap <Leader>O O<Esc>^Da
 
 " Teo maps
 nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-`> :terminal<CR>

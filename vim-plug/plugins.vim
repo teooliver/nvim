@@ -15,16 +15,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
+    " Plug 'itchyny/vim-gitbranch'
 
     " Themes
     Plug 'joshdick/onedark.vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'tomasiser/vim-code-dark'
     Plug 'pangloss/vim-javascript'
-    Plug 'itchyny/vim-gitbranch'
     Plug 'arzg/vim-substrata'
     Plug 'dylnmc/novum.vim'
-
+    Plug 'flrnd/candid.vim'
+    Plug 'junk-e/identity.vim '
+    Plug 'wadackel/vim-dogrun'
+    Plug 'zefei/simple-dark'
+    Plug 'dikiaap/minimalist'
+    
     "  Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -51,6 +56,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Jsx/Js syntax highlighting
     Plug 'mxw/vim-jsx'
     Plug 'pangloss/vim-javascript'
+
+    " Comments
+    Plug 'tpope/vim-commentary' 
 
 
 

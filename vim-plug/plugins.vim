@@ -8,15 +8,6 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-
-    " Plug 'itchyny/vim-gitbranch'
-
     " Themes
     Plug 'joshdick/onedark.vim'
     Plug 'arcticicestudio/nord-vim'
@@ -29,19 +20,31 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wadackel/vim-dogrun'
     Plug 'zefei/simple-dark'
     Plug 'dikiaap/minimalist'
-    
-    "  Intellisense
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-     " Closetags
-    Plug 'alvan/vim-closetag'
+    " Better Syntax Support
+    Plug 'sheerun/vim-polyglot'
+
+    " File Explorer
+    Plug 'scrooloose/NERDTree'
+
+    " Auto pairs for '(' '[' '{'
+    Plug 'jiangmiao/auto-pairs'
+    
+    " Pair Colorizer  
+    " Plug 'something'
 
     " Auto change html tags
     Plug 'AndrewRadev/tagalong.vim'
+    
+     " Auto close tags
+    Plug 'alvan/vim-closetag'
 
-    "Barbar - tabline plugin
-    " Plug 'romgrk/barbar.nvim'
-    " Plug 'kyazdani42/nvim-web-devicons'
+    " Easy Comments gc, gcc
+    Plug 'tpope/vim-commentary' 
+
+    "  Intellisense
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " add extensions
 
     " Status Line
     Plug 'vim-airline/vim-airline'
@@ -57,9 +60,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mxw/vim-jsx'
     Plug 'pangloss/vim-javascript'
 
-    " Comments
-    Plug 'tpope/vim-commentary' 
+    " TSX
+    Plug 'leafgarland/typescript-vim'
+    Plug 'ianks/vim-tsx'
+ 
+    " Git integration
+    " Plug 'itchyny/vim-gitbranch'
 
-
-
+    "Barbar - tabline plugin
+    " Plug 'romgrk/barbar.nvim'
+    " Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
+
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx

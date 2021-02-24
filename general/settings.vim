@@ -2,8 +2,6 @@
 let g:mapleader = "\<Space>"
 
 " Teo Settings
-let g:codedark_conservative = 1
-let g:airline_theme = 'codedark'
 colorscheme codedark
 " colorscheme substrata
 " colorscheme novum

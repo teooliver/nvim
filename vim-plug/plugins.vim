@@ -16,10 +16,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'arzg/vim-substrata'
     Plug 'dylnmc/novum.vim'
     Plug 'flrnd/candid.vim'
-    Plug 'junk-e/identity.vim '
     Plug 'wadackel/vim-dogrun'
     Plug 'zefei/simple-dark'
     Plug 'dikiaap/minimalist'
+    " Plug 'junk-e/identity.vim '
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -44,26 +44,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "  Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " add extensions
+    " add coc extensions
+    "['coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-eslint']
+    
+    " Typescript
+    Plug 'leafgarland/typescript-vim'
+    Plug 'ianks/vim-tsx'
 
     " Status Line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     
-    "Prettier
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
-    "Linting
-    Plug 'w0rp/ale'
-
-    " Jsx/Js syntax highlighting
-    Plug 'mxw/vim-jsx'
-    Plug 'pangloss/vim-javascript'
-
-    " TSX
-    Plug 'leafgarland/typescript-vim'
-    Plug 'ianks/vim-tsx'
- 
     " Git integration
     " Plug 'itchyny/vim-gitbranch'
 

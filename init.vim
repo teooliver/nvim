@@ -54,9 +54,15 @@ call plug#begin(stdpath('data') . 'vimplug')
     "OneDark+
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
+
+    " Prettier
+    Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 
+" Format prettier on save
+autocmd BufWritePre *.js Neoformat prettier
 
 " colorscheme  novum
 " configure nvcode-color-schemes
@@ -228,4 +234,6 @@ require("lsp")
 require("treesitter")
 require("statusbar")
 require("completion")
+" require("lspconfig").tsserver.setup{}
+" require'lspconfig'.rust_analyzer.setup{}
 EOF

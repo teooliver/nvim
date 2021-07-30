@@ -34,6 +34,9 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'scrooloose/NERDTree'
 
 
+    "  Icons
+    Plug 'ryanoasis/vim-devicons'
+
      " Themes
     " Plug 'NLKNguyen/papercolor-theme'
     Plug 'joshdick/onedark.vim'
@@ -47,11 +50,20 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'zefei/simple-dark'
     Plug 'dikiaap/minimalist'
 
+
+    "OneDark+
+    Plug 'christianchiarulli/nvcode-color-schemes.vim'
+
 call plug#end()
 
 
 
-colorscheme  novum
+" colorscheme  novum
+" configure nvcode-color-schemes
+let g:nvcode_termcolors=256
+syntax on
+colorscheme onedark " Or whatever colorscheme you make
+
 " if(has("termguicolors"))
 set termguicolors                     " For colors to work on Mac iTerm
 syntax enable                           " Enables syntax highlighing

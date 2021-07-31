@@ -9,6 +9,8 @@
 " source $HOME/.config/nvim/general/settings.vim
 " source $HOME/.config/nvim/keys/mappings.vim
 
+
+
 " >> load plugins
 call plug#begin(stdpath('data') . 'vimplug')
     Plug 'nvim-lua/plenary.nvim'
@@ -42,7 +44,8 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'tpope/vim-commentary' 
 
     " File Explorer
-    Plug 'scrooloose/NERDTree'
+    Plug 'scrooloose/NERDTree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
     " Plug 'kyazdani42/nvim-tree.lua'
 
 
@@ -72,6 +75,32 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'sbdchd/neoformat'
 
 call plug#end()
+
+
+" let g:NERDTreeGitStatusIndicatorMapCustom = {
+"                 \ 'Modified'  :'✹',
+"                 \ 'Staged'    :'✚',
+"                 \ 'Untracked' :'✭',
+"                 \ 'Renamed'   :'➜',
+"                 \ 'Unmerged'  :'═',
+"                 \ 'Deleted'   :'✖',
+"                 \ 'Dirty'     :'✗',
+"                 \ 'Ignored'   :'☒',
+"                 \ 'Clean'     :'✔︎',
+"                 \ 'Unknown'   :'?',
+"                 \ }
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'M',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'U',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'D',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 
 " Format prettier on save

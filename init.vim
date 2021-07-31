@@ -10,7 +10,6 @@
 " source $HOME/.config/nvim/keys/mappings.vim
 
 
-
 " >> load plugins
 call plug#begin(stdpath('data') . 'vimplug')
     Plug 'nvim-lua/plenary.nvim'

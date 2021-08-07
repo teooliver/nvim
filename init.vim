@@ -144,7 +144,7 @@ set autoindent
 set mouse=a  " mouse support
 
 
- "============================================================
+"============================================================
 " Mappings
 "============================================================
 
@@ -245,12 +245,20 @@ nnoremap <Leader>O O<Esc>^Da
 " Teo maps
 let mapleader = "\<Space>"
 nnoremap <leader>e :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
+" nnoremap <C-e> :NERDTreeToggle<CR>
+
+
+" start and end of line 
 nnoremap <leader>h ^
 nnoremap <leader>l $
 
 
+" move between buffers
+map <C-Left> <Esc>:bprev<CR>
+map <C-Right> <Esc>:bnext<CR>
 
-" nnoremap <C-e> :NERDTreeToggle<CR>
+" Nerd Tree toggling
 nnoremap <C-j> :terminal<CR>
 nnoremap <leader>j :terminal<CR> 
 

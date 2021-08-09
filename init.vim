@@ -70,6 +70,9 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'dikiaap/minimalist'
 
 
+    " Rust
+    Plug 'rust-lang/rust.vim'
+
     "OneDark+
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
@@ -117,6 +120,10 @@ colorscheme  novum
 let g:nvcode_termcolors=256
 syntax on
 " colorscheme onedark " Or whatever colorscheme you make
+
+" Rust
+filetype plugin indent on
+let g:rustfmt_autosave = 1
 
 " if(has("termguicolors"))
 set termguicolors                     " For colors to work on Mac iTerm

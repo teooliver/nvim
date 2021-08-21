@@ -38,26 +38,17 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
 
-    " Plug 'tpope/vim-eunuch'
-    " Plug 'tpope/vim-fugitive'
-
-
     " Easy Comments gc, gcc
-    " Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-commentary' 
 
     " File Explorer
     Plug 'scrooloose/NERDTree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
-    " Plug 'kyazdani42/nvim-tree.lua'
-
 
     "  Icons
-    " Plug 'kyazdani42/nvim-web-devicons' " for file icons
     Plug 'ryanoasis/vim-devicons'
 
      " Themes
-    " Plug 'NLKNguyen/papercolor-theme'
     Plug 'joshdick/onedark.vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'tomasiser/vim-code-dark'
@@ -73,10 +64,6 @@ call plug#begin(stdpath('data') . 'vimplug')
     " Rust
     Plug 'rust-lang/rust.vim'
 
-    "OneDark+
-    Plug 'christianchiarulli/nvcode-color-schemes.vim'
-
-
     " Prettier
     Plug 'sbdchd/neoformat'
 
@@ -86,18 +73,6 @@ call plug#end()
 " Teo settings
 "============================================================
 
-" let g:NERDTreeGitStatusIndicatorMapCustom = {
-"                 \ 'Modified'  :'✹',
-"                 \ 'Staged'    :'✚',
-"                 \ 'Untracked' :'✭',
-"                 \ 'Renamed'   :'➜',
-"                 \ 'Unmerged'  :'═',
-"                 \ 'Deleted'   :'✖',
-"                 \ 'Dirty'     :'✗',
-"                 \ 'Ignored'   :'☒',
-"                 \ 'Clean'     :'✔︎',
-"                 \ 'Unknown'   :'?',
-"                 \ }
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'M',
                 \ 'Staged'    :'✚',
@@ -119,7 +94,6 @@ colorscheme  novum
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
 syntax on
-" colorscheme onedark " Or whatever colorscheme you make
 
 " Rust
 filetype plugin indent on
@@ -301,19 +275,8 @@ require("treesitter")
 require("statusbar")
 require("completion")
 EOF
-" require("lspconfig").tsserver.setup{}
-" require'lspconfig'.rust_analyzer.setup{}
-" require('tree-sitter-typescript').typescript; // TypeScript grammar
-" require('tree-sitter-typescript').tsx; // TSX grammar
 
-" ============================================================================= 
-" ============================================================================= 
-" ============================================================================= 
-" ============================================================================= 
-" ============================================================================= 
-" ============================================================================= 
-" ============================================================================= 
-" ============================================================================= 
+
 " ============================================================================= 
 " ============================================================================= 
 
@@ -334,28 +297,7 @@ set shortmess+=c
 lua << EOF
 require'lspconfig'.rust_analyzer.setup{}
 EOF
-" lua <<EOF
 
-" -- nvim_lsp object
-" local nvim_lsp = require'lspconfig'
-
-" -- function to attach completion when setting up lsp
-" local on_attach = function(client)
-"     require'completion'.on_attach(client)
-" end
-
-" -- Enable rust_analyzer
-" nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
-
-" -- Enable diagnostics
-" vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-"   vim.lsp.diagnostic.on_publish_diagnostics, {
-"     virtual_text = true,
-"     signs = true,
-"     update_in_insert = true,
-"   }
-" )
-" EOF
 
 " have a fixed column for the diagnostics to appear in
 " this removes the jitter when warnings/errors flow in
@@ -369,9 +311,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " use <Tab> as trigger keys
 imap <Tab> <Plug>(completion_smart_tab)
 imap <S-Tab> <Plug>(completion_smart_s_tab)
-
-" Enable type inlay hints
-" autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost * lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
 
 
 " END RUST

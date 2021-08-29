@@ -49,18 +49,10 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'ryanoasis/vim-devicons'
 
      " Themes
-    Plug 'joshdick/onedark.vim'
-    Plug 'arcticicestudio/nord-vim'
-    Plug 'tomasiser/vim-code-dark'
-    Plug 'pangloss/vim-javascript'
-    Plug 'arzg/vim-substrata'
     Plug 'dylnmc/novum.vim'
-    Plug 'flrnd/candid.vim'
-    Plug 'wadackel/vim-dogrun'
-    Plug 'zefei/simple-dark'
-    Plug 'dikiaap/minimalist'
 
 
+    
     " Rust
     Plug 'rust-lang/rust.vim'
 

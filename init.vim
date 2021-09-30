@@ -10,9 +10,9 @@
 " source $HOME/.config/nvim/keys/mappings.vim
 
 
-"============================================================
+" ============================================================
 " Plugins
-"============================================================
+" ============================================================
 
 " >> load plugins
 call plug#begin(stdpath('data') . 'vimplug')
@@ -61,9 +61,9 @@ call plug#begin(stdpath('data') . 'vimplug')
 
 call plug#end()
 
-"============================================================
+" ============================================================
 " Teo settings
-"============================================================
+" ============================================================
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'M',
@@ -117,36 +117,36 @@ set autoindent
 set mouse=a  " mouse support
 
 
-"============================================================
+" ============================================================
 " Mappings
-"============================================================
+" ============================================================
 
 
 " >> Telescope bindings
 nnoremap <Leader>pp :lua require'telescope.builtin'.builtin{}<CR>
 
-" most recentuly used files
+" " most recentuly used files
 nnoremap <Leader>m :lua require'telescope.builtin'.oldfiles{}<CR>
 
-" find buffer
+" " find buffer
 nnoremap ; :lua require'telescope.builtin'.buffers{}<CR>
 
-" find in current buffer
+" " find in current buffer
 nnoremap <Leader>/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
 
-" bookmarks
+" " bookmarks
 nnoremap <Leader>' :lua require'telescope.builtin'.marks{}<CR>
 
-" git files
+" " git files
 nnoremap <Leader>f :lua require'telescope.builtin'.git_files{}<CR>
 
-" all files
+" " all files
 nnoremap <Leader>bfs :lua require'telescope.builtin'.find_files{}<CR>
 
-" ripgrep like grep through dir
+" " ripgrep like grep through dir
 nnoremap <Leader>rg :lua require'telescope.builtin'.live_grep{}<CR>
 
-" pick color scheme
+" " pick color scheme
 nnoremap <Leader>cs :lua require'telescope.builtin'.colorscheme{}<CR>
 
 
@@ -261,7 +261,29 @@ inoremap ? ?<c-g>u
 vnoremap " <esc>`>a"<esc>`<i"<esc>
 
 
-lua <<EOF
+:set listchars=eol:⏎,tab:>-,trail:·,extends:>,precedes:<
+:set list
+
+
+
+" NEEDS TESTING
+" BETTER COPY/CUT/DELETE/PASTE
+" nnoremap x "_x
+" nnoremap d "_d
+" nnoremap D "_D
+" vnoremap d "_d
+
+" nnoremap <leader>d ""d
+" nnoremap <leader>D ""D
+" vnoremap <leader>d ""d
+
+
+
+
+
+" END MAPPINGS
+
+lua << EOF
 require("lsp")
 require("treesitter")
 require("statusbar")

@@ -50,8 +50,9 @@ call plug#begin(stdpath('data') . 'vimplug')
 
      " Themes
     Plug 'dylnmc/novum.vim'
+    Plug 'dracula/vim', { 'as': 'dracula' }
 
-
+                                          
     
     " Rust
     Plug 'rust-lang/rust.vim'
@@ -82,11 +83,12 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " Format prettier on save
 autocmd BufWritePre *.js Neoformat prettier
 
-colorscheme  novum
+colorscheme dracula
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
 syntax on
-
+set encoding=UTF-8
+                
 " Rust
 filetype plugin indent on
 let g:rustfmt_autosave = 1
@@ -181,6 +183,14 @@ nnoremap <M-k>    :resize+2<CR>
 nnoremap <M-h>    :vertical resize-2<CR>
 nnoremap <M-l>    :vertical resize+2<CR>
 
+" Better Copy/Cut/Paste
+nnoremap x "_x
+nnoremap X "_x
+nnoremap <Del> "_x
+nnoremap d "_d
+nnoremap D "_d
+vnoremap d "_d          
+vnoremap D "_d
 
 " Easy CAPS
 inoremap <c-u> <ESC>viwUi
@@ -260,9 +270,8 @@ inoremap ? ?<c-g>u
 " Add quotes around visual selection
 vnoremap " <esc>`>a"<esc>`<i"<esc>
 
-
-:set listchars=eol:⏎,tab:>-,trail:·,extends:>,precedes:<
-:set list
+" :set listchars=eol:⏎,tab:>-,trail:·,extends:>,precedes:<
+" :set list
 
 
 
@@ -323,8 +332,8 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " use <Tab> as trigger keys
-imap <Tab> <Plug>(completion_smart_tab)
-imap <S-Tab> <Plug>(completion_smart_s_tab)
+" imap <Tab> <Plug>(completion_smart_tab)
+" imap <S-Tab> <Plug>(completion_smart_s_tab)
 
 
 " END RUST

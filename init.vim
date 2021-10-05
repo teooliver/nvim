@@ -29,7 +29,9 @@ call plug#begin(stdpath('data') . 'vimplug')
     "  Statusline plugin 
     Plug 'glepnir/galaxyline.nvim', { 'branch': 'main' }
     Plug 'kyazdani42/nvim-web-devicons'  " needed for galaxyline icons
-
+    
+    " Briefly highlight which text was yanked.
+    Plug 'machakann/vim-highlightedyank'
     
     "  Integrates your shell and text-editing experience
     Plug 'nikvdp/neomux'
@@ -41,7 +43,7 @@ call plug#begin(stdpath('data') . 'vimplug')
     " Easy Comments gc, gcc
     Plug 'tpope/vim-commentary' 
 
-    " File Explorer
+    " File Explorer                           
     Plug 'scrooloose/NERDTree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 

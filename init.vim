@@ -53,7 +53,7 @@ call plug#begin(stdpath('data') . 'vimplug')
      " Themes
     Plug 'dylnmc/novum.vim'
     Plug 'dracula/vim', { 'as': 'dracula' }
-
+    Plug 'tomasiser/vim-code-dark'
                                           
     
     " Rust
@@ -85,7 +85,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " Format prettier on save
 autocmd BufWritePre *.js Neoformat prettier
 
-colorscheme dracula
+colorscheme codedark
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
 syntax on
@@ -157,6 +157,7 @@ nnoremap <Leader>cs :lua require'telescope.builtin'.colorscheme{}<CR>
 " >> setup nerdcomment key bindings
 " let g:NERDCreateDefaultMappings = 0
 " let g:NERDSpaceDelims = 1
+let NERDTreeShowHidden=1
 
 " xnoremap <Leader>ci :call NERDComment('n', 'toggle')<CR>
 " nnoremap <Leader>ci :call NERDComment('n', 'toggle')<CR>

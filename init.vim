@@ -47,6 +47,11 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'scrooloose/NERDTree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
+
+    " Barbar
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'romgrk/barbar.nvim'
+    
     "  Icons
     Plug 'ryanoasis/vim-devicons'
 

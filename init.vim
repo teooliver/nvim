@@ -327,7 +327,7 @@ require("treesitter")
 require("statusbar")
 require("completion")
 EOF
-require('gitsigns').setup()
+" require('gitsigns').setup()
 
 
 " ============================================================================= 

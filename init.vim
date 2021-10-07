@@ -168,6 +168,9 @@ let NERDTreeShowHidden=1
 " nnoremap <Leader>ci :call NERDComment('n', 'toggle')<CR>
 
 
+" BufferClose
+nnoremap <silent>    <C-W> :BufferClose<CR>
+
 " >> Lsp key bindings
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <C-]> <cmd>lua vim.lsp.buf.definition()<CR>

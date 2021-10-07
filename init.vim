@@ -186,6 +186,13 @@ nnoremap <M-k>    :resize+2<CR>
 nnoremap <M-h>    :vertical resize-2<CR>
 nnoremap <M-l>    :vertical resize+2<CR>
 
+
+" Disable Ex Mode
+nnoremap Q  <nop>
+" Disable q (recording)
+nnoremap q  <nop>
+
+
 " Better Copy/Cut/Paste
 nnoremap x "_x
 nnoremap X "_x

@@ -6,18 +6,18 @@
 
 
 " source $HOME/.config/nvim/vim-plug/plugins.vim
-" source $HOME/.config/nvim/general/settings.vim
-" source $HOME/.config/nvim/keys/mappings.vim
 
+" source $HOME/.config/nvim/keys/mappings.vim
 
 " ============================================================
 " Plugins
+" source $HOME/.config/nvim/general/settings.vim
 " ============================================================
 
 " >> load plugins
 call plug#begin(stdpath('data') . 'vimplug')
-    Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
@@ -25,6 +25,12 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'hrsh7th/nvim-compe'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+
+
+    " Git Integration
+    Plug 'lewis6991/gitsigns.nvim'
+
+
 
     "  Statusline plugin 
     Plug 'glepnir/galaxyline.nvim', { 'branch': 'main' }
@@ -34,7 +40,7 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'machakann/vim-highlightedyank'
     
     "  Integrates your shell and text-editing experience
-    Plug 'nikvdp/neomux'
+    " Plug 'nikvdp/neomux'
 
     " Plug 'tpope/vim-ragtag'
     Plug 'tpope/vim-surround'
@@ -106,7 +112,6 @@ syntax enable                           " Enables syntax highlighing
 set colorcolumn=180
 
 " basic settings
-syntax on
 set number
 set relativenumber
 set ignorecase      " ignore case
@@ -120,7 +125,7 @@ set ruler
 set smartindent
 set shiftwidth=4
 set hlsearch
-set virtualedit=all
+" set virtualedit=all
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set autoindent
 set mouse=a  " mouse support
@@ -256,8 +261,8 @@ nnoremap <leader>l $
 
 
 " move between buffers
-map <C-Left> <Esc>:bprev<CR>
-map <C-Right> <Esc>:bnext<CR>
+" map <C-Left> <Esc>:bprev<CR>
+" map <C-Right> <Esc>:bnext<CR>
 
 " Nerd Tree toggling
 nnoremap <C-j> :terminal<CR>
@@ -266,11 +271,17 @@ nnoremap <leader>j :terminal<CR>
 
 " Move lines up and down
 vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv               
+vnoremap <C-Up> :m '<-2<CR>gv=gv               
 nnoremap J :m .+1<CR>==
+nnoremap <C-Down> :m .+1<CR>==
 nnoremap K :m .-2<CR>==
+nnoremap <C-Up> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-Down> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
+inoremap <C-Up> <Esc>:m .-2<CR>==gi
 
 " MUST HAVE VIM REMAPS (JULY 2021) https://www.youtube.com/watch?v=hSHATqh8svM
 
@@ -316,6 +327,7 @@ require("treesitter")
 require("statusbar")
 require("completion")
 EOF
+require('gitsigns').setup()
 
 
 " ============================================================================= 

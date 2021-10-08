@@ -26,11 +26,11 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
+    " Minimap (rust minimap)
+    Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
     " Git Integration
     Plug 'lewis6991/gitsigns.nvim'
-
-
 
     "  Statusline plugin 
     Plug 'glepnir/galaxyline.nvim', { 'branch': 'main' }
@@ -91,6 +91,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+
 
 
 " Format prettier on save
@@ -369,3 +370,11 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " END RUST
 
+
+" Minimap Config
+hi MinimapCurrentLine ctermfg=Blue guifg=#5fbbf4  guibg=#32302f
+let g:minimap_width = 4
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_highlight_range = 1
+let g:minimap_highlight = 'MinimapCurrentLine'

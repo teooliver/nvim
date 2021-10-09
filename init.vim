@@ -62,7 +62,7 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'ryanoasis/vim-devicons'
 
      " Themes
-    pLug 'dylnmc/novum.vim'
+    Plug 'dylnmc/novum.vim' 
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'tomasiser/vim-code-dark'
                                           

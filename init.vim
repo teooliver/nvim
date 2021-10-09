@@ -62,7 +62,7 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'ryanoasis/vim-devicons'
 
      " Themes
-    Plug 'dylnmc/novum.vim'
+    pLug 'dylnmc/novum.vim'
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'tomasiser/vim-code-dark'
                                           
@@ -111,7 +111,7 @@ let g:rustfmt_autosave = 1
 set termguicolors                     " For colors to work on Mac iTerm
 syntax enable                           " Enables syntax highlighing
 set colorcolumn=180
-
+set nowrap
 " basic settings
 set number
 " set relativenumber
@@ -130,6 +130,7 @@ set hlsearch
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set autoindent
 set mouse=a  " mouse support
+set clipboard=unnamedplus
 
 
 " ============================================================
@@ -378,3 +379,20 @@ let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
 let g:minimap_highlight_range = 1
 let g:minimap_highlight = 'MinimapCurrentLine'
+
+
+
+" LSP Config
+let g:lsp_document_highlight_enabled = 1
+
+
+
+
+
+
+
+
+
+
+
+

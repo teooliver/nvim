@@ -46,8 +46,8 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
 
-    " Easy Comments gc, gcc
     Plug 'tpope/vim-commentary' 
+    " Easy Comments gc, gcc
 
     " File Explorer                           
     Plug 'scrooloose/NERDTree' |
@@ -274,13 +274,13 @@ nnoremap <leader>j :terminal<CR>
 
 
 " Move lines up and down
-vnoremap J :m '>+1<CR>gv=gv
+vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-Down> :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv               
+vnoremap <C-k> :m '<-2<CR>gv=gv               
 vnoremap <C-Up> :m '<-2<CR>gv=gv               
-nnoremap J :m .+1<CR>==
+nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-Down> :m .+1<CR>==
-nnoremap K :m .-2<CR>==
+nnoremap <C-k> :m .-2<CR>==
 nnoremap <C-Up> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-Down> <Esc>:m .+1<CR>==gi

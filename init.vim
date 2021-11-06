@@ -65,6 +65,7 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'dylnmc/novum.vim' 
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'tomasiser/vim-code-dark'
+    Plug 'EdenEast/nightfox.nvim'
                                           
     
     " Rust
@@ -97,7 +98,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " Format prettier on save
 autocmd BufWritePre *.js Neoformat prettier
 
-colorscheme codedark
+" colorscheme codedarkg
+colorscheme nightfox
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
 syntax on
@@ -173,7 +175,6 @@ let NERDTreeShowHidden=1
 
 " xnoremap <Leader>ci :call NERDComment('n', 'toggle')<CR>
 " nnoremap <Leader>ci :call NERDComment('n', 'toggle')<CR>
-
 
 " BufferClose
 nnoremap <silent>    <C-W> :BufferClose<CR>

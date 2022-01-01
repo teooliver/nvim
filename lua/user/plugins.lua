@@ -82,8 +82,15 @@ return packer.startup(function(use)
   -- Custom
   -- Minimap (rust minimap)
   -- use 'wfxr/minimap.vim'
+  -- use "akinsho/bufferline.nvim"
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
 
 
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

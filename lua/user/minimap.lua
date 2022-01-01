@@ -13,7 +13,7 @@
 -- let g:minimap_highlight = 'MinimapCurrentLine'
 
 vim.cmd ([[
-  hi MinimapCurrentLine ctermfg=Blue guifg=#5fbbf4  guibg=#32302f
+  hi MinimapCurrentLine ctermfg=Blue guifg=#5fbbf4 guibg=#32302f
 ]])
 
 vim.g.minimap_width = 4

@@ -76,8 +76,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"
-  -- use "nvim-treesitter/playground"
+  use "p00f/nvim-ts-rainbow" -- Rainbow {[()]}
 
   -- Custom
   -- Minimap (rust minimap)
@@ -87,6 +86,8 @@ return packer.startup(function(use)
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
+
+  use "nvim-lualine/lualine.nvim"
 
 
   use "kyazdani42/nvim-web-devicons"

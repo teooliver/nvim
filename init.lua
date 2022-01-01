@@ -4,8 +4,6 @@
 --    / /|  /| |/ / / / / / / /
 --   /_/ |_/ |___/_/_/ /_/ /_/
 
-
-
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -15,6 +13,7 @@ require "user.lsp"
 require "user.treesitter"
 require "user.nvim-tree"
 require "user.barbar"
+require "user.lualine"
 
 
 -- require "user.bufferline"

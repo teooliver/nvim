@@ -75,21 +75,22 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 
 -- -- Nvim-Tree
-local tree ={}
-tree.open = function ()
-   require'bufferline.state'.set_offset(31, 'FileTree')
-   require'nvim-tree'.find_file(true)
-end
+-- local tree ={}
+-- tree.open = function ()
+--    require'bufferline.state'.set_offset(31, 'FileTree')
+--    require'nvim-tree'.find_file(true)
+-- end
 
-tree.close = function ()
-   require'bufferline.state'.set_offset(0)
-   require'nvim-tree'.close()
-end
+-- tree.close = function ()
+--    require'bufferline.state'.set_offset(0)
+--    require'nvim-tree'.close()
+-- end
 
-return tree 
+-- return tree 
 
 
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>e", ":lua require'user.nvim-tree'.toggle_tree()<CR>", opts)
 -- nnoremap <C-n> :NvimTreeToggle<CR>
 -- nnoremap <leader>r :NvimTreeRefresh<CR>
 -- nnoremap <leader>n :NvimTreeFindFile<CR>

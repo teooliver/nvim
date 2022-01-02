@@ -29,3 +29,6 @@ require "user.indentline"
 -- vim.cmd ([[
 --   hi MinimapCurrentLine ctermfg=Blue guifg=#5fbbf4  guibg=#32302f
 -- ]])
+
+
+-- autocmd BufWrite * :Autoformat

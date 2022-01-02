@@ -116,12 +116,17 @@ keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -- " Alternate way to save
 keymap("n", "<C-s>", ":w<CR>", opts) -- On a Mac remap Iterm keys to Send Hex Codes: 0x13 when using Command + s
--- do the same for undo and redo
+
+
+-- iTerm Hex Key Code Remaping Notes:
+-- u  => 0x75 (undo)
+-- ^r => 0x12 (redo)
+
 
 -- " Alternate way to quit
 -- nnoremap <C-Q> :wq!<CR>
 
--- nnoremap <leader>j :terminal<CR> 
+keymap("n", "<leader>j", ":terminal<CR>", opts) 
 
 -- " Move lines up and down
 -- vnoremap <C-j> :m '>+1<CR>gv=gv

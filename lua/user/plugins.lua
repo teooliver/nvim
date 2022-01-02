@@ -77,6 +77,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow" -- Rainbow {[()]}
+  use "lukas-reineke/indent-blankline.nvim" -- Show empty spaces
 
   -- Custom
   -- Minimap (rust minimap)

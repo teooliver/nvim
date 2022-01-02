@@ -16,6 +16,7 @@ require "user.autopairs"
 require "user.gitsigns"
 require "user.barbar"
 require "user.lualine"
+require "user.indentline"
 
 
 -- require "user.bufferline"

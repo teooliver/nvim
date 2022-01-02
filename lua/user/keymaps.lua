@@ -94,3 +94,52 @@ vim.api.nvim_set_keymap("n", "<leader>e", ":lua require'user.nvim-tree'.toggle_t
 -- nnoremap <C-n> :NvimTreeToggle<CR>
 -- nnoremap <leader>r :NvimTreeRefresh<CR>
 -- nnoremap <leader>n :NvimTreeFindFile<CR>
+
+-- Custom ======
+
+
+keymap("n", "<C-w>", ":BufferClose<CR>", opts)
+
+-- " Disable Ex Mode
+-- nnoremap Q  <nop>
+-- " Disable q (recording)
+-- nnoremap q  <nop>
+
+-- " Better Copy/Cut/Paste
+-- nnoremap x "_x
+-- nnoremap X "_x
+-- nnoremap <Del> "_x
+-- nnoremap d "_d
+-- nnoremap D "_d
+-- vnoremap d "_d          
+-- vnoremap D "_d
+
+-- " Alternate way to save
+keymap("n", "<C-s>", ":w<CR>", opts) -- On a Mac remap Iterm keys to Send Hex Codes: 0x13 when using Command + s
+-- do the same for undo and redo
+
+-- " Alternate way to quit
+-- nnoremap <C-Q> :wq!<CR>
+
+-- nnoremap <leader>j :terminal<CR> 
+
+-- " Move lines up and down
+-- vnoremap <C-j> :m '>+1<CR>gv=gv
+-- vnoremap <C-Down> :m '>+1<CR>gv=gv
+-- vnoremap <C-k> :m '<-2<CR>gv=gv               
+-- vnoremap <C-Up> :m '<-2<CR>gv=gv               
+-- nnoremap <C-j> :m .+1<CR>==
+-- nnoremap <C-Down> :m .+1<CR>==
+-- nnoremap <C-k> :m .-2<CR>==
+-- nnoremap <C-Up> :m .-2<CR>==
+-- inoremap <C-j> <Esc>:m .+1<CR>==gi
+-- inoremap <C-Down> <Esc>:m .+1<CR>==gi
+-- inoremap <C-k> <Esc>:m .-2<CR>==gi
+-- inoremap <C-Up> <Esc>:m .-2<CR>==gi
+
+-- " start and end of line 
+-- nnoremap <leader>h ^
+-- nnoremap <leader>l $
+
+-- " Add quotes around visual selection
+-- vnoremap " <esc>`>a"<esc>`<i"<esc>

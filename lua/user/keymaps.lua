@@ -102,8 +102,10 @@ keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -- " Disable Ex Mode
 -- nnoremap Q  <nop>
+keymap("n", "<Q>", "<Nop>", opts)
 -- " Disable q (recording)
 -- nnoremap q  <nop>
+keymap("n", "<q>", "<Nop>", opts)
 
 -- " Better Copy/Cut/Paste
 -- nnoremap x "_x

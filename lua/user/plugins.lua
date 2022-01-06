@@ -95,9 +95,12 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "windwp/nvim-autopairs"
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- Helper for Comment.nvim
+  use "akinsho/toggleterm.nvim"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

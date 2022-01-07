@@ -24,7 +24,6 @@ require "user.indentline"
 -- require "user.bufferline"
 -- require "user.minimap"
 
-
 -- vim.cmd "colorschem darkplus"
 
 -- vim.cmd ([[

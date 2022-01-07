@@ -97,6 +97,9 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "JoosepAlviste/nvim-ts-context-commentstring" -- Helper for Comment.nvim
   use "akinsho/toggleterm.nvim"
+  use 'machakann/vim-highlightedyank' -- Briefly highlight which text was yanked.
+
+
 
   -- Git
   use "lewis6991/gitsigns.nvim"

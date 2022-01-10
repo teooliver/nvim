@@ -84,11 +84,12 @@ return packer.startup(function(use)
   -- Custom
   -- Minimap (rust minimap)
   -- use 'wfxr/minimap.vim'
-  -- use "akinsho/bufferline.nvim"
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use "moll/vim-bbye"
+  -- use {
+  --   'romgrk/barbar.nvim',
+  --   requires = {'kyazdani42/nvim-web-devicons'}
+  -- }
 
   use "nvim-lualine/lualine.nvim"
   use "kyazdani42/nvim-web-devicons"

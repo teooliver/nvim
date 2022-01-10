@@ -90,7 +90,7 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 
 -- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-vim.api.nvim_set_keymap("n", "<leader>e", ":lua require'user.nvim-tree'.toggle_tree()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- nnoremap <C-n> :NvimTreeToggle<CR>
 -- nnoremap <leader>r :NvimTreeRefresh<CR>
 -- nnoremap <leader>n :NvimTreeFindFile<CR>
@@ -98,7 +98,7 @@ vim.api.nvim_set_keymap("n", "<leader>e", ":lua require'user.nvim-tree'.toggle_t
 -- Custom ======
 
 
-keymap("n", "<C-w>", ":BufferClose<CR>", opts)
+keymap("n", "<C-w>", ":BufferLinePickClose<CR>", opts)
 
 -- " Disable Ex Mode
 -- nnoremap Q  <nop>

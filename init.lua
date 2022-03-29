@@ -4,6 +4,12 @@
 --    / /|  /| |/ / / / / / / /
 --   /_/ |_/ |___/_/_/ /_/ /_/
 
+if (vim.g.vscode) then
+require "user.options"
+require "user.keymaps"
+require "user.plugins"
+require "user.comment"
+else
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -20,7 +26,7 @@ require "user.toggleterm"
 require "user.lualine"
 require "user.indentline"
 
-
+end
 -- require "user.barbar"
 -- require "user.minimap"
 -- vim.cmd "colorschem darkplus"

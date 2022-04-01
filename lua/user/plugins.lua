@@ -99,7 +99,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring" -- Helper for Comment.nvim
   use "akinsho/toggleterm.nvim"
   use 'machakann/vim-highlightedyank' -- Briefly highlight which text was yanked.
-
+  use 'tpope/vim-surround'
 
 
   -- Git

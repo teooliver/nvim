@@ -27,7 +27,7 @@ require "user.lualine"
 require "user.indentline"
 
 end
--- require "user.barbar"
+-- require "user."barbar""
 -- require "user.minimap"
 -- vim.cmd "colorschem darkplus"
 

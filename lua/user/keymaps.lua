@@ -109,12 +109,19 @@ keymap("n", "<q>", "<Nop>", opts)
 
 -- " Better Copy/Cut/Paste
 -- nnoremap x "_x
+keymap("n", "x", '"_x', opts)
 -- nnoremap X "_x
+keymap("n", "X", '"_x', opts)
 -- nnoremap <Del> "_x
+keymap("n", "<Del>", '"_x', opts)
 -- nnoremap d "_d
+keymap("n", "d", '"_d', opts)
 -- nnoremap D "_d
+keymap("n", "D", '"_d', opts)
 -- vnoremap d "_d          
+keymap("v", "d", '"_d', opts)
 -- vnoremap D "_d
+keymap("v", "D", '"_d', opts)
 
 -- " Alternate way to save
 keymap("n", "<C-s>", ":w<CR>", opts) -- On a Mac remap Iterm keys to Send Hex Codes: 0x13 when using Command + s

@@ -25,6 +25,33 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- ===================================================
+-- TODO:
+-- No arrow keys --- force yourself to use the home row
+keymap("n", "<C-h>", "<C-w>h", opts)
+-- nnoremap <up> <nop>
+-- nnoremap <down> <nop>
+-- inoremap <up> <nop>
+-- inoremap <down> <nop>
+-- inoremap <left> <nop>
+-- inoremap <right> <nop>
+
+-- Left and right can switch buffers
+-- nnoremap <left> :bp<CR>
+-- nnoremap <right> :bn<CR>
+
+
+-- Jump to start and end of line using the home row keys
+-- map H ^
+-- map L $
+--
+-- " Ctrl+h to stop searching
+-- vnoremap <C-h> :nohlsearch<cr>
+-- nnoremap <C-h> :nohlsearch<cr>
+
+-- ===================================================
+
+
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
@@ -114,9 +141,9 @@ keymap("n", "<q>", "<Nop>", opts)
 
 -- " Better Copy/Cut/Paste
 -- nnoremap x "_x
-keymap("n", "x", '"_x', opts)
+-- keymap("n", "x", '"_x', opts)
 -- nnoremap X "_x
-keymap("n", "X", '"_x', opts)
+-- keymap("n", "X", '"_x', opts)
 -- nnoremap <Del> "_x
 keymap("n", "<Del>", '"_x', opts)
 -- nnoremap d "_d

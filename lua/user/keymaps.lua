@@ -26,6 +26,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- ===================================================
+-- https://github.com/jonhoo/configs/blob/cc87af03e22c948729acca336f46f0dcc67ff104/editor/.config/nvim/init.vim#L442-L448
 -- TODO:
 -- No arrow keys --- force yourself to use the home row
 keymap("n", "<C-h>", "<C-w>h", opts)
